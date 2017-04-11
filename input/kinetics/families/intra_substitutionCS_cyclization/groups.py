@@ -465,23 +465,23 @@ entry(
 
 entry(
     index = 57,
-    label = "CsJ-CdSs",
+    label = "CsJ-CdS2s",
     group = 
 """
 1 *3 Cs u1 {2,S} {3,S}
 2    Cd u0 {1,S}
-3    Ss u0 {1,S}
+3    S2s u0 {1,S}
 """,
     kinetics = None,
 )
 
 entry(
     index = 67,
-    label = "CsJ-Ss",
+    label = "CsJ-S2s",
     group = 
 """
 1 *3 Cs u1 {2,S} {3,S}
-2    Ss u0 {1,S}
+2    S2s u0 {1,S}
 3    R  u0 {1,S}
 """,
     kinetics = None,
@@ -489,11 +489,11 @@ entry(
 
 entry(
     index = 69,
-    label = "CsJ-SsH",
+    label = "CsJ-S2sH",
     group = 
 """
 1 *3 Cs u1 {2,S} {3,S}
-2    Ss u0 {1,S}
+2    S2s u0 {1,S}
 3    H  u0 {1,S}
 """,
     kinetics = None,
@@ -501,11 +501,11 @@ entry(
 
 entry(
     index = 70,
-    label = "CsJ-SsCs",
+    label = "CsJ-S2sCs",
     group = 
 """
 1 *3 Cs u1 {2,S} {3,S}
-2    Ss u0 {1,S}
+2    S2s u0 {1,S}
 3    Cs u0 {1,S}
 """,
     kinetics = None,
@@ -513,22 +513,22 @@ entry(
 
 entry(
     index = 72,
-    label = "CsJ-SsSs",
+    label = "CsJ-S2sS2s",
     group = 
 """
 1 *3 Cs u1 {2,S} {3,S}
-2    Ss u0 {1,S}
-3    Ss u0 {1,S}
+2    S2s u0 {1,S}
+3    S2s u0 {1,S}
 """,
     kinetics = None,
 )
 
 entry(
     index = 82,
-    label = "SsJ",
+    label = "S2sJ",
     group = 
 """
-1 *3 Ss u1
+1 *3 S2s u1
 """,
     kinetics = None,
 )
@@ -552,7 +552,7 @@ entry(
 """
 1 *1 Cs           u0 {2,S} {3,S}
 2    C            u0 {1,S}
-3    [H,Cs,Os,Ss] u0 {1,S}
+3    [H,Cs,Os,S2s] u0 {1,S}
 """,
     kinetics = None,
 )
@@ -612,7 +612,7 @@ entry(
 """
 1 *1 Cs           u0 {2,S} {3,S}
 2    S            u0 {1,S}
-3    [H,Cs,Os,Ss] u0 {1,S}
+3    [H,Cs,Os,S2s] u0 {1,S}
 """,
     kinetics = None,
 )
@@ -689,11 +689,11 @@ entry(
 
 entry(
     index = 166,
-    label = "S-Ss",
+    label = "S-S2s",
     group = 
 """
 1 *2 S  u0 {2,S}
-2    Ss u0 {1,S}
+2    S2s u0 {1,S}
 """,
     kinetics = None,
 )
@@ -738,17 +738,17 @@ L1: YJ
         L3: CsJ
             L4: CsJ-Cd
                 L5: CsJ-CdCs
-                L5: CsJ-CdSs
+                L5: CsJ-CdS2s
                 L5: CsJ-CdH
-            L4: CsJ-Ss
-                L5: CsJ-SsCs
-                L5: CsJ-SsSs
-                L5: CsJ-SsH
+            L4: CsJ-S2s
+                L5: CsJ-S2sCs
+                L5: CsJ-S2sS2s
+                L5: CsJ-S2sH
             L4: CsJ-Cs
                 L5: CsJ-CsCs
                 L5: CsJ-CsH
             L4: CsJ-HH 
-    L2: SsJ
+    L2: S2sJ
 
 L1: Cs
     L2: Cs-RR
@@ -766,7 +766,7 @@ L1: Cs
 
 L1: S
     L2: S-Cs
-    L2: S-Ss
+    L2: S-S2s
     L2: S-SJ
     L2: S-H
 """

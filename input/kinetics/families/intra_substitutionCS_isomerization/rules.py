@@ -53,7 +53,7 @@ entry(
 
 entry(
     index = 4,
-    label = "XSR4J_SS_Ss;C-HHH;CsJ-HH",
+    label = "XSR4J_SS_S2s;C-HHH;CsJ-HH",
     kinetics = ArrheniusEP(
         A = (1.51e+11, 's^-1'),
         n = 0.327,
