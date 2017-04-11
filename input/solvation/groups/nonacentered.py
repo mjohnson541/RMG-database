@@ -889,6 +889,7 @@ L1: R
         L3: OxR5
         L3: OxR6
         L3: OxR7
+    L2: SdOdOdN
     L2: N3sH2-benz
     L2: N3sHCd(Od)N3sH
     L2: Cd(Od)NH2
