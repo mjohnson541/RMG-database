@@ -1016,7 +1016,7 @@ entry(
     label = "S",
     group = 
 """
-1 * [S,Ss,Sd,Sa] u0
+1 * S u0 px
 """,
     solute = SoluteData(
         S = 0.643,
@@ -1037,7 +1037,7 @@ entry(
     label = "Ss",
     group = 
 """
-1 * Ss u0
+1 * S2s u0
 """,
     solute = SoluteData(
         S = 0.189,
@@ -1058,11 +1058,11 @@ entry(
     label = "Ss-aromatic",
     group = 
 """
-1 * Ss       u0 {2,S} {5,S}
-2   Cb       u0 {1,S} {3,B}
+1 * S4b      u0 {2,B} {5,B}
+2   Cb       u0 {1,B} {3,B}
 3   [Cb,N3b] u0 {2,B} {4,B}
 4   [Cb,N3b] u0 {3,B} {5,B}
-5   Cb       u0 {1,S} {4,B}
+5   Cb       u0 {1,B} {4,B}
 """,
     solute = SoluteData(
         S = 0,
@@ -1083,7 +1083,7 @@ entry(
     label = "Sd",
     group = 
 """
-1 * Sd u0
+1 * S2d u0
 """,
     solute = SoluteData(
         S = 0.618,
@@ -1104,9 +1104,9 @@ entry(
     label = "Sds",
     group = 
 """
-1 * Sd u0 p1 {2,S} {3,S}
-2   R  u0 {1,S}
-3   R  u0 {1,S}
+1 * S4d u0 p1 {2,S} {3,S}
+2   R   u0 {1,S}
+3   R   u0 {1,S}
 """,
     solute = SoluteData(
         S = 1.065,
@@ -1121,31 +1121,31 @@ u"""
 
 """,
 )
-#remove until we have hypervalent sulfur
-# entry(
-#     index = 35,
-#     label = "SdsOsOdOd",
-#     group = 
-# """
-# 1 * Sd u0 {2,D} {3,D} {4,S} {5,S}
-# 2   Od u0 {1,D}
-# 3   Od u0 {1,D}
-# 4   Os u0 {1,S}
-# 5   R  u0 {1,S}
-# """,
-#     solute = SoluteData(
-#         S = -0.505,
-#         B = -0.188,
-#         E = 0.0,
-#         L = 0.0,
-#         A = 0.0,
-#     ),
-#     shortDesc = u"""Platts fragment 35 sulfonate""",
-#     longDesc = 
-# u"""
 
-# """,
-# )
+entry(
+    index = 35,
+    label = "SdsOsOdOd",
+    group = 
+"""
+1 * S6dd u0 {2,D} {3,D} {4,S} {5,S}
+2   Od   u0 {1,D}
+3   Od   u0 {1,D}
+4   Os   u0 {1,S}
+5   R    u0 {1,S}
+""",
+    solute = SoluteData(
+        S = -0.505,
+        B = -0.188,
+        E = 0.0,
+        L = 0.0,
+        A = 0.0,
+    ),
+    shortDesc = u"""Platts fragment 35 sulfonate""",
+    longDesc = 
+u"""
+
+""",
+)
 
 tree(
 """
@@ -1198,9 +1198,10 @@ L1: R
             L4: N3bpyr
     L2: S
         L3: Ss
-            L4: Ss-aromatic
+        L3: Ss-aromatic
         L3: Sd
-            L4: Sds
+        L3: Sds
+        L3: SdsOsOdOd
 """
 )
 
